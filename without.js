@@ -6,9 +6,10 @@ const eqArrays = (firstArr, secondArr) => {
   return true;
 };
 
-const assertArraysEqual = function(firstArr, secondArr, bool) {
-  let status = eqArrays(firstArr, secondArr);
-  return status === bool ? true : false;
+const assertArraysEqual = function(firstArr, secondArr) {
+  eqArrays(firstArr, secondArr)
+    ? console.log(`👌 Assertion Passed 👌: ${firstArr} === ${secondArr}`)
+    : console.log(`💥 Assertion Failed 💥: ${firstArr} !== ${secondArr}`);
 };
 
 const without = (items, junkItems) => {
