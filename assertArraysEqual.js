@@ -6,20 +6,20 @@ const eqArrays = (firstArr, secondArr) => {
   return true;
 };
 
-const arraysEqual = function(firstArr, secondArr, bool) {
+const assertArraysEqual = function(firstArr, secondArr, bool) {
   let status = eqArrays(firstArr, secondArr);
   return status === bool ? true : false;
 };
 
 console.log(
-  arraysEqual([1,2,3], [1,2,3], true) // expect true
+  assertArraysEqual([1,2,3], [1,2,3], true) // expect true
 );
 console.log(
-  arraysEqual([1,2,3], [1,2,3], false) // expect false
+  assertArraysEqual([1,2,3], [1,2,3], false) // expect false
 );
 console.log(
-  arraysEqual([1,2,3], [1,2,4], true) // expect false
+  assertArraysEqual([1,2,3], [1,2,4], true) // expect false
 );
 console.log(
-  arraysEqual([1,2,3], [1,2,4], false) // expect true
+  assertArraysEqual([1,2,3], [1,2,4], false) // expect true
 );
